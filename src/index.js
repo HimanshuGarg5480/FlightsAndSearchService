@@ -7,7 +7,7 @@ const setupAndStartServer = async () => {
   const app = express();
 
   app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({extended:ture}));
+  app.use(bodyParser.urlencoded({extended:true}));
   
   app.listen(port, () => {
     console.log(`server started at ${port}`);
