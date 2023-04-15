@@ -15,12 +15,12 @@ class CityRepository {
     }
     async deletecity({cityid}){
         try {
-            const c = await City.destroy(
+            await City.destroy(
                 {where:{
                     id:cityid
                 }} 
             )
-            return c;
+            return true;
             
         } catch (error) {
             console.lot("Something went wrong in the repository layer");
