@@ -9,7 +9,7 @@ class CityRepository {
             });
             return c;
         } catch (error) {
-            console.lot("Something went wrong in the repository layer");
+            console.log("Something went wrong in the repository layer");
             throw(error);
         }
     }
@@ -23,7 +23,7 @@ class CityRepository {
             return true;
             
         } catch (error) {
-            console.lot("Something went wrong in the repository layer");
+            console.log("Something went wrong in the repository layer");
             throw(error);
         }
     }
@@ -38,17 +38,17 @@ class CityRepository {
             return c;
             
         } catch (error) {
-            console.lot("Something went wrong in the repository layer");
+            console.log("Something went wrong in the repository layer");
             throw(error);
         }
     }
     async getcity({cityid}){
         try {
-            const c = await City.findbypk(cityid)
+            const c = await City.findByPk(cityid)
             return c;
             
         } catch (error) {
-            console.lot("Something went wrong in the repository layer");
+            console.log("Something went wrong in the repository layer");
             throw(error);
         }
     }

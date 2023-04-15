@@ -1,10 +1,10 @@
-const {cityService, cityService} = require('../services/index.js');
+const { cityService} = require('../services/index.js');
 
-const cityService = new cityService();
+const cityservice = new cityService();
 
 const create = async (req,res)=>{
     try {
-       const city = await cityService.createCity(req.body);
+       const city = await cityservice.createCity(req.body);
        res.status(200).json({
         data:city,
         success:true,
