@@ -29,7 +29,7 @@ class CityRepository {
         }
     }
     
-    async updatecity({cityid,data}){
+    async updatecity(cityid,data){
         try {
             const c = await City.update(data,{
                 where:{
@@ -46,6 +46,16 @@ class CityRepository {
     async getcity(cityid){
         try {
             const c = await City.findByPk(cityid)
+            return c;
+            
+        } catch (error) {
+            console.log("Something went wrong in the repository layer");
+            throw(error);
+        }
+    }
+    async getallcities(){
+        try {
+            const c = await City.findAll();
             return c;
             
         } catch (error) {
